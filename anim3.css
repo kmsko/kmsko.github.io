@@ -1,0 +1,203 @@
+/* ШАРИКИ */
+
+.boobbles1 {
+    width: 69px;
+    position: absolute;
+    left: 183px;
+    top: 152px;
+    z-index: 3;
+    animation-name: booblesAnim1;
+    animation-duration: 7s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes booblesAnim1 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    30% {
+        transform: translate(27px, 10px);
+    }
+    50% {
+        transform: translate(0px, 0px);
+    }
+    80% {
+        transform: translate(33px, -10px) scale(0.8);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.boobbles2 {
+    width: 139px;
+    position: absolute;
+    left: 183px;
+    bottom: -73px;
+    z-index: 3;
+    animation-name: booblesAnim2;
+    animation-duration: 7s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes booblesAnim2 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(22px, 10px) scale(1.1);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.boobbles3 {
+    width: 34px;
+    position: absolute;
+    left: 10px;
+    bottom: 281px;
+    z-index: 3;
+    animation-name: booblesAnim3;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes booblesAnim3 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(25px, -10px) scale(0.8);
+    }
+    100% {
+        transform: translate(-5px, -20px) scale(1);
+    }
+}
+
+.boobbles4 {
+    width: 73px;
+    position: absolute;
+    left: 25px;
+    bottom: 142px;
+    z-index: 3;
+    animation-name: booblesAnim4;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes booblesAnim4 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(25px, -10px);
+    }
+    100% {
+        transform: translate(-5px, -20px) scale(1.2);
+    }
+}
+
+.boobbles5 {
+    width: 33px;
+    position: absolute;
+    left: 78px;
+    top: 213px;
+    z-index: 2;
+    animation-name: booblesAnim5;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes booblesAnim5 {
+    0% {
+        transform: translate(-15px, 0px);
+    }
+    50% {
+        transform: translate(35px, -10px);
+    }
+    100% {
+        transform: translate(-25px, -20px) scale(1.2);
+    }
+}
+
+.boobbles6 {
+    width: 110px;
+    position: absolute;
+    left: 191px;
+    top: 319px;
+    z-index: 2;
+    animation-name: booblesAnim6;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes booblesAnim6 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(30px, 10px) scale(0.8);
+    }
+    100% {
+        transform: translate(15px, 10px) scale(1.2);
+    }
+}
+
+
+.boobbles7 {
+    width: 39px;
+    position: absolute;
+    left: 197px;
+    top: 64px;
+    z-index: 2;
+    animation-name: booblesAnim7;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes booblesAnim7 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(25px, 35px) ;
+    }
+}
+
+
+.boobbles8 {
+    width: 44px;
+    position: absolute;
+    left: 259px;
+    bottom: 128px;
+    z-index: 2;
+    animation-name: booblesAnim8;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes booblesAnim8 {
+    0% {
+        transform: translate(0px, 0px) scale(1.2);
+    }
+
+    100% {
+        transform: translate(25px, 25px) scale(0.8);
+    }
+}

@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'DIN Pro Regular';
+    src: url('./fonts/DINpro/DINPro.eot');
+    src: url('./fonts/DINpro/DINPro.eot?#iefix') format('embedded-opentype'), url('./fonts/DINpro/DINPro.woff') format('woff'), url('./fonts/DINpro/DINPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Pro Bold';
+    src: url('./fonts/DINproBold/DINPro-Bold.eot');
+    src: url('./fonts/DINproBold/DINPro-Bold.eot?#iefix') format('embedded-opentype'), url('./fonts/DINproBold/DINPro-Bold.woff') format('woff'), url('./fonts/DINproBold/DINPro-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Light';
+    src: url('./fonts/GilRoyLight/Gilroy-Light.eot');
+    src: url('./fonts/GilRoyLight/Gilroy-Light.eot?#iefix') format('embedded-opentype'), url('./fonts/GilRoyLight/Gilroy-Light.woff') format('woff'), url('./fonts/GilRoyLight/Gilroy-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Regular';
+    src: url('./fonts/GilRoyRegular/Gilroy-Regular.eot');
+    src: url('./fonts/GilRoyRegular/Gilroy-Regular.eot?#iefix') format('embedded-opentype'), url('./fonts/GilRoyRegular/Gilroy-Regular.woff') format('woff'), url('./fonts/GilRoyRegular/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Extra Bold';
+    src: url('./fonts/GilRoyExtraBold/Gilroy-ExtraBold.eot');
+    src: url('./fonts/GilRoyExtraBold/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'), url('./fonts/GilRoyExtraBold/Gilroy-ExtraBold.woff') format('woff'), url('./fonts/GilRoyExtraBold/Gilroy-ExtraBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Regular';
+    src: url('./fonts/Circeregular/Circe-Regular.eot');
+    src: url('./fonts/Circeregular/Circe-Regular.eot?#iefix') format('embedded-opentype'), url('./fonts/Circeregular/Circe-Regular.woff') format('woff'), url('./fonts/Circeregular/Circe-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -123,6 +123,9 @@ window.addEventListener('load', ()=>{
 scrollBar.addEventListener('touchmove', (e)=>{
     itemScroll.style.top =`-${Number(scrollBar.value)}px`
 })
+scrollBar.addEventListener('touchend', (e)=>{
+    itemScroll.style.top =`-${Number(scrollBar.value)}px`
+})
 
 
  

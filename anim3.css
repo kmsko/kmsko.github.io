@@ -109,7 +109,7 @@
     position: absolute;
     left: 78px;
     top: 213px;
-    z-index: 2;
+    z-index: 1;
     animation-name: booblesAnim5;
     animation-duration: 6s;
     animation-timing-function: linear;
@@ -134,7 +134,7 @@
     position: absolute;
     left: 191px;
     top: 319px;
-    z-index: 2;
+    z-index: 1;
     animation-name: booblesAnim6;
     animation-duration: 4s;
     animation-timing-function: linear;
@@ -160,7 +160,7 @@
     position: absolute;
     left: 197px;
     top: 64px;
-    z-index: 2;
+    z-index: 1;
     animation-name: booblesAnim7;
     animation-duration: 3s;
     animation-timing-function: linear;
@@ -184,7 +184,7 @@
     position: absolute;
     left: 259px;
     bottom: 128px;
-    z-index: 2;
+    z-index: 1;
     animation-name: booblesAnim8;
     animation-duration: 3s;
     animation-timing-function: linear;

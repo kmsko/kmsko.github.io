@@ -88,7 +88,6 @@ btnWhatNext.addEventListener('touchend', (e) => {
     return indexSlider;
 })
 // слушатель домик возвращает на первую страницу сбрасывает анимацию на второй страницы,
-//  хотя можно просто перисовать страницу
 btnHome.addEventListener('touchend', (e) => {
     indexSlider=1;
     sliderTrack.style.left = `0px`;

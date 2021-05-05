@@ -3,7 +3,7 @@ const btnDetails = document.querySelector('.claendar__btn');// Кнопка по
 
 const btnDetailsClose = document.querySelector('.close');// Закрыть слайдер
 
-const slayderContainer = document.querySelector('.page-three__wrapper-slayder');// Контейнер слайдера
+const slaiderContainer = document.querySelector('.page-three__wrapper-slayder');// Контейнер слайдера
 
 const backgroundDark = document.querySelector('.black');// Тёмный фон
 
@@ -14,30 +14,28 @@ const btnNext = document.querySelector('.next');// Кнопка Next слайд
 const pageSlayder = document.querySelectorAll('.slayderPage');// Слайд
 
 const pageSlayderPagination = document.querySelectorAll('.pagination');// Слайд
-
-
+// Открыть закрыть модальное окно
+modalWindow = (openOrClose, scroll) =>{
+    backgroundDark.style.display = openOrClose;
+    slaiderContainer.style.display = openOrClose;
+    ScrollingPermission = scroll;
+} 
 btnDetails.addEventListener('touchend', (e)=>{
-    backgroundDark.style.display = 'block';
-    slayderContainer.style.display = 'block';
-    ScrollingPermission = false;
+    modalWindow('block', false)
 })
 btnDetailsClose.addEventListener('touchend', (e)=>{
-    backgroundDark.style.display = 'none';
-    slayderContainer.style.display = 'none';
-    ScrollingPermission = true;
+    modalWindow('none', true)
 })
 
-btnNext.addEventListener('touchend', (e)=>{
-    pageSlayder[0].classList.remove('slayderPage_active');
-    pageSlayder[1].classList.add('slayderPage_active');
-    pageSlayderPagination[0].classList.remove('active-pagination');
-    pageSlayderPagination[1].classList.add('active-pagination');
+slaidPagination = (openPage, closePage) =>{
+    pageSlayder[closePage].classList.toggle('slayderPage_active');
+    pageSlayder[openPage].classList.toggle('slayderPage_active');
+    pageSlayderPagination[closePage].classList.toggle('active-pagination');
+    pageSlayderPagination[openPage].classList.toggle('active-pagination');
+}
+btnNext.addEventListener('touchend', ()=>{
+    slaidPagination(0, 1)
 })
-
-
-btnPrev.addEventListener('touchend', (e)=>{
-    pageSlayder[1].classList.remove('slayderPage_active');
-    pageSlayder[0].classList.add('slayderPage_active');
-    pageSlayderPagination[1].classList.remove('active-pagination');
-    pageSlayderPagination[0].classList.add('active-pagination');
+btnPrev.addEventListener('touchend', ()=>{
+    slaidPagination(1, 0)
 })

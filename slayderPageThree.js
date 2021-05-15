@@ -14,6 +14,7 @@ const btnNext = document.querySelector('.next');// Кнопка Next слайд
 const pageSlayder = document.querySelectorAll('.slayderPage');// Слайд
 
 const pageSlayderPagination = document.querySelectorAll('.pagination');// Слайд
+
 // Открыть закрыть модальное окно
 modalWindow = (openOrClose, scroll) =>{
     backgroundDark.style.display = openOrClose;

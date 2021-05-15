@@ -1,0 +1,103 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Circe Regular';
+
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 768px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Обёртка меню */
+
+.menu {
+    display: flex;
+    position: absolute;
+    top: 26px;
+    left: 66px;
+    z-index: 1;
+}
+
+/* Кнопка Дом */
+
+.menu__button-home-page {
+    border: none;
+    outline: none;
+    background: none;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Картинка в кнопке */
+
+.menu__button-home-page__image {
+    height: 20px;
+    width: 22px;
+}
+
+/* Полосочка после кнопки */
+
+.menu__button-home-page::after {
+    content: "";
+    border-right: 2px solid black;
+    display: block;
+    height: 26px;
+    position: absolute;
+    right: -26px;
+    top: -1px;
+    margin-left: 10px;
+}
+
+/* ссылка PROJECT */
+
+.menu__link-project {
+    text-decoration: none;
+    color: black;
+    margin-left: 49px;
+    font-family: 'Circe Regular';
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.background_slaider {
+    position: absolute;
+    height: 768px;
+    width: 6159px;
+    transition: left 0.5s ease;
+}
+
+.imgbg {
+    position: absolute;
+    z-index: -4;
+    height: 768px;
+}
+
+.wrapper_page {
+    z-index: -2;
+    display: flex;
+}
+
+
+/* Маленькое лого снизу */
+
+.logo {
+    margin-top: 176px;
+    width: 58px;
+    margin-left: 2px;
+    position: absolute;
+    bottom: 12px;
+    left: 59px;
+    z-index: 4;
+}

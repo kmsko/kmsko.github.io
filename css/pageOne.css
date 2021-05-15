@@ -1,0 +1,56 @@
+/* СТРАНИЦА №1 */
+
+.page-one {
+    width: 1024px;
+    height: 768px;
+    padding: 27px 43px 13px 66px;
+    position: relative;
+}
+
+
+/* слово привет */
+
+.page-one__titel-hello {
+    font-family: 'DIN Pro Regular';
+    margin-top: 134px;
+    font-size: 27px;
+    text-transform: uppercase;
+    color: #242424;
+    letter-spacing: 0.07em;
+}
+
+/* Это не комерческое задание */
+
+.page-one__titel-comer {
+    font-family: 'Gilroy Light';
+    font-size: 109px;
+    text-transform: uppercase;
+    color: #171717;
+    margin-top: 13px;
+    letter-spacing: 0.055em;
+    line-height: 1.1em;
+}
+
+/* жирное не */
+
+.extraBold {
+    font-family: 'Gilroy Extra Bold';
+}
+
+/* Кнопка стр 1  */
+
+.page-one__btn {
+    border: none;
+    outline: none;
+    background: none;
+    display: inline;
+    margin-left: 4px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.page-one__btn__img {
+    width: 287px;
+    border: none;
+    outline: none;
+}

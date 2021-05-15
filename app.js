@@ -1,4 +1,4 @@
-
+"use strict"
 
 const sliderTrack = document.querySelector('.background');// обёртка заднего фона
 
@@ -17,6 +17,26 @@ let touchPosEnd = null;// Отпускает палец с экрана запу
 let ScrollingPermission = true;// true - прокрутка общего слайдера разрешена false - запрещена 
 
 const imgSperm = document.querySelectorAll('.sperm'); //Картинки головастиков 2 страница
+
+// 3 стр
+
+const btnDetails = document.querySelector('.claendar__btn');// Кнопка подробнее
+
+const btnDetailsClose = document.querySelector('.close');// Закрыть слайдер
+
+const slaiderContainer = document.querySelector('.page-three__wrapper-slayder');// Контейнер слайдера
+
+const backgroundDark = document.querySelector('.black');// Тёмный фон
+
+const btnPrev = document.querySelector('.prev');// Кнопка Prev слайд
+
+const btnNext = document.querySelector('.next');// Кнопка Next слайд
+
+const pageSlayder = document.querySelectorAll('.slayderPage');// Слайд
+
+const pageSlayderPagination = document.querySelectorAll('.pagination');// Слайд
+
+
 // функция переключения слайда 
 
 function swipe(whereTo, index) {
@@ -39,6 +59,22 @@ sliderTrack.addEventListener('transitionend', (e) => {
     }
 });
 
+// 3 страница функции 
+function modalWindow (openOrClose, scroll) {
+    backgroundDark.style.display = openOrClose;
+    slaiderContainer.style.display = openOrClose;
+    ScrollingPermission = scroll;
+};
+
+function slaidPagination (openPage, closePage){
+    pageSlayder[closePage].classList.toggle('slayderPage_active');
+    pageSlayder[openPage].classList.toggle('slayderPage_active');
+    pageSlayderPagination[closePage].classList.toggle('active-pagination');
+    pageSlayderPagination[openPage].classList.toggle('active-pagination');
+};
+
+
+
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
     alert("вы зашли с телефона")
     //Определение координаты косания по оси Х 
@@ -51,7 +87,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
         touchPosEnd = e.touches[0].clientX;
     });
 
-    //Сменя слайда
+    //Смена слайда ПАЛЬЦЕМ
     document.addEventListener('touchend', (e) => {
         if (touchPosEnd < touchPosStart - 200 && indexSlider < 3 && ScrollingPermission === true && touchPosEnd != null) {
             swipe(-1024, 1)
@@ -63,11 +99,11 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 
 
     // ЧТО ДАЛЬШЕ
-    btnWhatNext.addEventListener('touchend', (e) => ScrollingPermission && swipe(-1024, 1))
+    btnWhatNext.addEventListener('touchstart', (e) => ScrollingPermission && swipe(-1024, 1))
 
 
     // ДОМИК
-    btnHome.addEventListener('touchend', (e) => {
+    btnHome.addEventListener('touchstart', (e) => {
         indexSlider = 1;
         positionSlider = 0
         sliderTrack.style.left = `0px`;
@@ -90,7 +126,22 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
     scrollBar.addEventListener('touchend', (e) => {
         itemScroll.style.top = `-${scrollBar.value}px`
     })
+    // 3 стр Модальное окно
+    // Открыть закрыть модальное окно
 
+    btnDetails.addEventListener('touchstart', (e) => {
+        modalWindow('block', false)
+    })
+    btnDetailsClose.addEventListener('touchstart', (e) => {
+        modalWindow('none', true)
+    })
+
+    btnNext.addEventListener('touchstart', () => {
+        slaidPagination(0, 1)
+    })
+    btnPrev.addEventListener('touchstart', () => {
+        slaidPagination(1, 0)
+    })
 } else {
     alert("вы зашли с пк")
     // ДОМИК
@@ -105,8 +156,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 
     // ЧТО ДАЛЬШЕ
     btnWhatNext.addEventListener('click', (e) => ScrollingPermission && swipe(-1024, 1))
-  
-  
+
+
     // СКРУЛЛ 2 стр
     const scrollBar = document.querySelector('.scrollBar');
     const itemScroll = document.querySelector('.text-content');
@@ -123,9 +174,26 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
 
     // КНОПКА ЧТО ДАЛЬШЕ ВТОРАЯ СТРАНИЦА
 
-    document.querySelector('.page-two').insertAdjacentHTML('afterbegin', 
-    '<button class="page-two__btn"> Следующая страница ► </button>' )
+    document.querySelector('.page-two').insertAdjacentHTML('afterbegin',
+        '<button class="page-two__btn"> Следующая страница ► </button>')
     document.querySelector('.page-two__btn').addEventListener('click', (e) => ScrollingPermission && swipe(-1024, 1))
+
+    // 3 стр Модальное окно
+    // Открыть закрыть модальное окно
+
+    btnDetails.addEventListener('click', (e) => {
+        modalWindow('block', false)
+    })
+    btnDetailsClose.addEventListener('click', (e) => {
+        modalWindow('none', true)
+    })
+
+    btnNext.addEventListener('click', () => {
+        slaidPagination(0, 1)
+    })
+    btnPrev.addEventListener('click', () => {
+        slaidPagination(1, 0)
+    })
 }
 
 

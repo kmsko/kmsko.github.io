@@ -1,6 +1,6 @@
 "use strict"
 
-const sliderTrack = document.querySelector('.background');// обёртка заднего фона
+const sliderTrack = document.querySelector('.background_slaider');// обёртка заднего фона
 
 const btnWhatNext = document.querySelector('.page-one__btn');// Кнопка на первой страницы что дальше?
 
